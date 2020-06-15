@@ -4,9 +4,9 @@ import pickle
 import joblib
 import pdb
 
-app = Flask(__name__)
-loaded_model = joblib.load('./model.pkl')
-loaded_vec = joblib.load('./vectorizer.pkl')
+app = Flask(__name__, template_folder='templates')
+loaded_model = joblib.load('./models/model.pkl')
+loaded_vec = joblib.load('./models/vectorizer.pkl')
 label = {0: 'negative', 1: 'positive'}
 
 
